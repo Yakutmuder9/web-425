@@ -1,0 +1,17 @@
+{
+  "name": "ts-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "person-class": "tsc && node dist/person.class.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yakut Ahmedin",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "tslint": "^6.1.3",
+    "typescript": "^5.0.4"
+  }
+}
