@@ -1,0 +1,15 @@
+<br />
+<table class="table table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Full name</th>
+      <th scope="col">Genre</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let composer of composers"> 
+    <tr>
+      <td>{{composer.fullName}}</td>
+      <td>{{composer.genre}}</td>
+    </tr>
+  </tbody>
+</table>
