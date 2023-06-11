@@ -1,0 +1,12 @@
+/**
+ * Title: sign-in.component.css
+ * Author: Professor Krasso
+ * ModifiedBy: Yakut Ahmedin
+ * Date: 10 Jun 2023
+ * Description: sign-in component
+*/
+.signin-container {
+    width: 35%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
