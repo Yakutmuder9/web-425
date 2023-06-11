@@ -18,9 +18,10 @@ export class SignInGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    let isLoggedIn = next.queryParams.isLoggedIn
+    let isLoggedIn = next.queryParams.isLoggedIn;
 
-    if (isLoggedIn === true) {
+    
+    if (isLoggedIn) {
       return true;
     } else {
       this.router.navigate(['/']);

@@ -14,5 +14,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  assignment: string = 'Excersise 3.3 - Passing Data to Routes, Part 2';
+  assignment: string = 'Enhanced Profile APP';
 }
