@@ -1,3 +1,10 @@
+/**
+ * Title: home.component.ts
+ * Author: Professor Krasso
+ * ModifiedBy: Yakut Ahmedin
+ * Date: 10 Jun 2023
+ * Description: home page
+*/
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
