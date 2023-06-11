@@ -1,3 +1,10 @@
+/**
+ * Title: composer-list.component.ts
+ * Author: Professor Krasso
+ * ModifiedBy: Yakut Ahmedin
+ * Date: 10 Jun 2023
+ * Description: composer component
+*/
 import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';
 import { Composer } from '../composer.class';

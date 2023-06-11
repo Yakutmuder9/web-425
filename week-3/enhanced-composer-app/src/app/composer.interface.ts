@@ -2,7 +2,7 @@
  * Title: composer-list.component.ts
  * Author: Professor Krasso
  * ModifiedBy: Yakut Ahmedin
- * Date: 02 Jun 2023
+ * Date: 10 Jun 2023
  * Description: composer component
 */
 
