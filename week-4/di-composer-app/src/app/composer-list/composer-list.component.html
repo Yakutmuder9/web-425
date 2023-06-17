@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col">
+    <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Composer ID</th>
+          <th scope="col">Full name</th>
+          <th scope="col">Genre</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let composer of composers">
+        <tr>
+          <td scope="row">
+            <a
+              routerLink="/composer-details/{{ composer.composerId }}"
+              class="text-decoration-none"
+            >
+              {{ composer.composerId }}
+            </a>
+          </td>
+          <td scope="row">{{ composer.fullName }}</td>
+          <td scope="row">{{ composer.genre }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
