@@ -8,6 +8,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';
 import { ComposerService } from '../composer.service';
+import { debounceTime } from 'rxjs/operators';
+import { FormControl } from '@angular/forms';
 
 
 @Component({
@@ -19,11 +21,16 @@ import { ComposerService } from '../composer.service';
 export class ComposerListComponent implements OnInit {
 
   composers: Array<IComposer>;
+  txtSearchControl = new FormControl('');
 
   constructor(private ComposerService: ComposerService) {
     this.composers = this.ComposerService.getComposers();
+    this.txtSearchControl.valueChanges.pipe(debounceTime(500)).subscribe(val => this.filterComposer(val))
   }
 
   ngOnInit(): void { }
 
+  filterComposer(name: string) {
+    alert(name);
+  }
 }

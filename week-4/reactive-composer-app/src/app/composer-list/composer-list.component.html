@@ -1,5 +1,14 @@
 <div class="row">
   <div class="col-sm-12">
+    <div class="textSearch">
+      <input
+        type="text"
+        class="form-control"
+        id="txtSearch"
+        placeholder="Search by name"
+        [formControl]="txtSearchControl"
+      />
+    </div>
     <table class="table table-bordered">
       <thead class="table-dark">
         <tr>
