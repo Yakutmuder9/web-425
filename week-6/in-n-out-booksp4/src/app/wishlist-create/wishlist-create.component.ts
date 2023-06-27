@@ -18,6 +18,7 @@ export class WishlistCreateComponent implements OnInit {
   @Output() addItemEmitter = new EventEmitter<IWishlistItem>();
 
   item: IWishlistItem;
+  
   constructor() {
     this.item = {} as IWishlistItem;
   }

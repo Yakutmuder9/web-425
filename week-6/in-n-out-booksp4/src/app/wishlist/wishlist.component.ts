@@ -20,8 +20,6 @@ export class WishlistComponent implements OnInit {
   constructor() {
     
   }
-
-
   
   updateItemsHandler(item: IWishlistItem) {
     this.items.push(item);
