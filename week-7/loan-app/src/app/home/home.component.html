@@ -1,0 +1,44 @@
+<div>
+  <mat-card-title style="text-align: center" class="hufflepuff">
+    Welcome to the Loan Application!
+  </mat-card-title>
+
+  <br />
+  <br />
+
+  <mat-card-content>
+    <div fxLayout="row" fxLayoutGap="20px">
+      <div fxFlex class="loan-form" style="width: 50px">
+        <form fxLayout="column">
+          <mat-form-field>
+            <mat-label>Loan Amount</mat-label>
+            <input matInput type="number" [(ngModel)]="loanAmount" />
+          </mat-form-field>
+          <br />
+          <mat-form-field>
+            <mat-label>Interest Rate</mat-label>
+            <input matInput type="number" [(ngModel)]="interestRate" />
+          </mat-form-field>
+          <br />
+          <mat-form-field>
+            <mat-label>Number of Years</mat-label>
+            <input matInput type="number" [(ngModel)]="numberOfYears" />
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" (click)="calculateLoan()">
+            Calculate
+          </button>
+        </form>
+      </div>
+
+      <div fxFlex class="loan-summary" *ngIf="monthlyPayment && totalInterest">
+        <h5 class="hufflepuff" style="font-size: medium">
+          Your monthly payment
+        </h5>
+        <h1>${{ monthlyPayment | currency }}</h1>
+        <h5 class="hufflepuff" style="font-size: medium">Interest paid:</h5>
+        <h1>${{ totalInterest | currency }}</h1>
+      </div>
+    </div>
+  </mat-card-content>
+</div>
