@@ -1,0 +1,38 @@
+<div fxLayout="column wrap">
+  <h2 fxFlex class="green">Top 5 Favorite Books</h2>
+
+  <table fxFlex mat-table [dataSource]="books" class="mat-elevation-z8">
+    <tr mat-header-row *matHeaderRowDef="header"></tr>
+    <tr mat-row *matRowDef="let row; columns: header"></tr>
+
+    <ng-container matColumnDef="isbn">
+      <th mat-header-cell *matHeaderCellDef>ISBN</th>
+      <td mat-cell *matCellDef="let elemnt">
+        
+        <a class="a-link blue" (click)="showBookDetails(elemnt.isbn)">
+          {{ elemnt.isbn }}
+        </a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef>Title</th>
+      <td mat-cell *matCellDef="let elemnt">
+        {{ elemnt.title }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="numOfPages">
+      <th mat-header-cell *matHeaderCellDef>Number of pages</th>
+      <td mat-cell *matCellDef="let elemnt">
+        {{ elemnt.numOfPages }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="authors">
+      <th mat-header-cell *matHeaderCellDef>Number of pages</th>
+      <td mat-cell *matCellDef="let elemnt">
+        {{ elemnt.authors.join(", ") }}
+      </td>
+    </ng-container>
+  </table>
+</div>
